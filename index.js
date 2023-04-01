@@ -15,6 +15,6 @@ function handleSubmit(event)
         time: event.target.time.value,
     }
 
-    localStorage.setItem('details', JSON.stringify(details))
+    localStorage.setItem(event.target.email.value, JSON.stringify(details))
     alert("User details saved successfully.");
 }
