@@ -7,9 +7,14 @@ function handleSubmit(event)
     console.log(event.target.date.value)
     console.log(event.target.time.value)
 
-    localStorage.setItem('name', event.target.username.value)
-    localStorage.setItem('email', event.target.email.value)
-    localStorage.setItem('phone', event.target.phone.value)
-    localStorage.setItem('date', event.target.date.value)
-    localStorage.setItem('time', event.target.time.value)
+    let details = {
+        name: event.target.username.value,
+        email: event.target.email.value,
+        phone: event.target.phone.value,
+        date: event.target.date.value,
+        time: event.target.time.value,
+    }
+
+    localStorage.setItem('details', JSON.stringify(details))
+    alert("User details saved successfully.");
 }
